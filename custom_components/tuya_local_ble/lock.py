@@ -63,9 +63,9 @@ class TuyaBLECategoryLockMapping:
 
 
 mapping: dict[str, TuyaBLECategoryLockMapping] = {
-    "jtmspro": TuyaBLECategoryLockMapping(
+    "ms": TuyaBLECategoryLockMapping(
         products={
-            "rlyxv7pe":  # Gimdow Smart Lock
+            "6pt5mb09":  # Gimdow Smart Lock
             [
                 TuyaBLELockMapping(
                     dp_id_unlock=6,
