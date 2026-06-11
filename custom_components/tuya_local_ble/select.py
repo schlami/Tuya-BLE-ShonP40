@@ -84,24 +84,66 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
     ),
     "ms": TuyaBLECategorySelectMapping(
         products={
-            **dict.fromkeys(
-                ["ludzroix", "isk2p555", "6pt5mb09"], # Smart Lock
-                [
-                    TuyaBLESelectMapping(
-                        dp_id=31,
-                        description=SelectEntityDescription(
-                            key="beep_volume",
-                            options=[
-                                "mute",
-                                "low",
-                                "normal",
-                                "high",
-                            ],
-                            entity_category=EntityCategory.CONFIG,
-                        ),
+            "6pt5mb09": [
+                TuyaBLESelectMapping(
+                    dp_id=31,
+                    description=SelectEntityDescription(
+                        key="beep_volume",
+                        icon="mdi:volume-high",
+                        options=[
+                            "mute",
+                            "low",
+                            "normal",
+                            "high",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
                     ),
-                ]
-            ),
+                    dp_type=TuyaBLEDataPointType.DT_ENUM,
+                ),
+                TuyaBLESelectMapping(
+                    dp_id=28,
+                    description=SelectEntityDescription(
+                        key="language",
+                        icon="mdi:translate",
+                        options=[
+                            "chinese_simplified",
+                            "english",
+                            "japanese",
+                            "russian",
+                            "german",
+                            "spanish",
+                            "french",
+                            "korean",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                    dp_type=TuyaBLEDataPointType.DT_ENUM,
+                ),
+                TuyaBLESelectMapping(
+                    dp_id=68,
+                    description=SelectEntityDescription(
+                        key="special_function",
+                        icon="mdi:tools",
+                        options=[
+                            "function1",
+                            "function2",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLESelectMapping(
+                    dp_id=46,
+                    description=SelectEntityDescription(
+                        key="manual_lock",
+                        icon="mdi:tools",
+                        options=[
+                            "function1",
+                            "function2",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+            ],
         }
     ),
     "jtmspro": TuyaBLECategorySelectMapping(
