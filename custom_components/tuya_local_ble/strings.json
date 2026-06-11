@@ -195,7 +195,10 @@
       },
       "lock_motor_state": {
         "name": "Motor State"
-      },      
+      },
+      "reverse_lock": {
+        "name": "Reverse Lock"
+      },  
       "water_valve": {
           "name": "Irrigation valve"
       }    
