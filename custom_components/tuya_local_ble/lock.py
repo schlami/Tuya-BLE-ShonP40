@@ -68,7 +68,7 @@ mapping: dict[str, TuyaBLECategoryLockMapping] = {
             "6pt5mb09":  # Gimdow Smart Lock
             [
                 TuyaBLELockMapping(
-                    dp_id_unlock=32,    # dp_id_lock=6,
+                    dp_id_unlock=6,
                     dp_id_lock=46,  
                     dp_id=47,
                     # refer to sdk, dp 52 is for deleting temp password
